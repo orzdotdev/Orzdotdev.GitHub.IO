@@ -1,13 +1,9 @@
-# Hexo Configuration
-## Docs: https://hexo.io/docs/configuration.html
-## Source: https://github.com/hexojs/hexo/
-
 # Site
-title: Hexo
-subtitle: ''
+title: 技术开发
+subtitle: '保持热爱，奔赴星海'
 description: ''
 keywords:
-author: John Doe
+author: 技术开发
 language: en
 timezone: ''
 
@@ -96,9 +92,30 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: yilia
+jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: false
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: git@github.com:orzdotdev/Orzdotdev.GitHub.IO.git
+  branch: master
+  message: Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}
