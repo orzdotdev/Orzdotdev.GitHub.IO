@@ -232,9 +232,9 @@
 
 <blockquote>
 <p>原理分析:</p>
-<p>1.ssh 客户端是通过类似 <a href="mailto:&#103;&#105;&#116;&#x40;&#x67;&#x69;&#x74;&#x68;&#x75;&#x62;&#46;&#99;&#x6f;&#x6d;">git@github.com</a>:githubUserName&#x2F;repo.git 的地址来识别使用本地的哪个私钥的， 地址中的 User 是@前面的git， Host 是@后面的github.com。</p>
+<p>1.ssh 客户端是通过类似 <a href="mailto:&#103;&#105;&#116;&#x40;&#103;&#105;&#x74;&#x68;&#x75;&#x62;&#46;&#99;&#x6f;&#x6d;">git@github.com</a>:githubUserName&#x2F;repo.git 的地址来识别使用本地的哪个私钥的， 地址中的 User 是@前面的git， Host 是@后面的github.com。</p>
 <p>2.如果所有账号的 User 和 Host 都为 git 和 github.com，那么就只能使用一个私钥。 所以要对User 和 Host 进行配置，让每个账号使用自己的 Host，每个 Host 的域名做 CNAME 解析到 github.com， 如上面配置中的Host your_name.github.com。</p>
-<p>3.配置了别名之后，新的地址就是<a href="mailto:&#103;&#x69;&#x74;&#x40;&#x79;&#111;&#117;&#x72;&#95;&#110;&#97;&#109;&#101;&#46;&#x67;&#x69;&#x74;&#104;&#117;&#x62;&#x2e;&#99;&#x6f;&#109;">git@your_name.github.com</a>:githubUserName&#x2F;repo.git。 这样 ssh 在连接时就可以区别不同的账号了。</p>
+<p>3.配置了别名之后，新的地址就是<a href="mailto:&#103;&#105;&#116;&#x40;&#121;&#x6f;&#117;&#114;&#x5f;&#110;&#97;&#x6d;&#101;&#x2e;&#x67;&#105;&#x74;&#104;&#117;&#98;&#x2e;&#x63;&#111;&#x6d;">git@your_name.github.com</a>:githubUserName&#x2F;repo.git。 这样 ssh 在连接时就可以区别不同的账号了。</p>
 <p>4.其他平台也是同样理解</p>
 </blockquote>
 <p>3.验证配置</p>
@@ -276,7 +276,7 @@
 <li>创建仓库，<a target="_blank" rel="noopener" href="https://orzdotdev.github.io.git/">https://Orzdotdev.GitHub.IO.git</a>；</li>
 <li>创建两个分支：master 与 orz-dev；</li>
 <li>设置orz-dev为默认分支（因为我们只需要手动管理这个分支上的Hexo网站文件）；</li>
-<li>使用git clone <a href="mailto:&#103;&#105;&#116;&#x40;&#103;&#x69;&#x74;&#104;&#x75;&#98;&#46;&#x63;&#x6f;&#x6d;">git@github.com</a>:orzdotdev&#x2F;Orzdotdev.GitHub.IO.git 拷贝仓库；</li>
+<li>使用git clone <a href="mailto:&#x67;&#x69;&#x74;&#64;&#103;&#x69;&#116;&#104;&#117;&#98;&#x2e;&#x63;&#x6f;&#109;">git@github.com</a>:orzdotdev&#x2F;Orzdotdev.GitHub.IO.git 拷贝仓库；</li>
 <li>在本地<a target="_blank" rel="noopener" href="https://orzdotdev.github.io.git/">https://Orzdotdev.GitHub.IO.git</a>文件夹下通过Git bash依次执行npm install hexo、hexo init、npm install 和 npm install hexo-deployer-git（此时当前分支应显示为orz-dev,在执行hexo init时候尽量先把文件夹内容copy出来,否则容易清空.git文件）;</li>
 <li>修改_config.yml中的deploy参数，分支应为master；</li>
 <li>依次执行git add .、git commit -m “…“、git push origin hexo提交网站相关的文件；</li>
@@ -291,7 +291,7 @@
 <p>虽然两个过程顺序调转一般不会有问题，不过逻辑上这样的顺序是绝对没问题的（例如突然死机要重装了，悲催….的情况，调转顺序就有问题了）。</p>
 <h2 id="七、本地资料丢失后的流程"><a href="#七、本地资料丢失后的流程" class="headerlink" title="七、本地资料丢失后的流程"></a>七、本地资料丢失后的流程</h2><p>当重装电脑之后，或者想在其他电脑上修改博客，可以使用下列步骤：<br>注意： 切换npm到国内淘宝镜像，安装依赖<br>npm config set registry <a target="_blank" rel="noopener" href="https://registry.npmmirror.com/">https://registry.npmmirror.com</a><br>npm install</p>
 <ol>
-<li>使用git clone <a href="mailto:&#103;&#x69;&#116;&#64;&#103;&#x69;&#116;&#x68;&#117;&#98;&#x2e;&#99;&#111;&#x6d;">git@github.com</a>:orzdotdev&#x2F;Orzdotdev.GitHub.IO.git拷贝仓库（默认分支为orz-dev）；</li>
+<li>使用git clone <a href="mailto:&#103;&#x69;&#116;&#64;&#x67;&#105;&#116;&#x68;&#x75;&#98;&#x2e;&#99;&#111;&#109;">git@github.com</a>:orzdotdev&#x2F;Orzdotdev.GitHub.IO.git拷贝仓库（默认分支为orz-dev）；</li>
 <li>在本地新拷贝的<a target="_blank" rel="noopener" href="https://orzdotdev.github.io.git/">https://Orzdotdev.GitHub.IO.git</a>文件夹下通过Git bash依次执行下列指令：npm install hexo、npm install、npm install hexo-deployer-git（记得，不需要hexo init这条指令）。</li>
 </ol>
 <h2 id="八、其他-hexo语法"><a href="#八、其他-hexo语法" class="headerlink" title="八、其他(hexo语法)"></a>八、其他(hexo语法)</h2><p><strong>（1）<code>$ hexo g</code>或<code>$ hexo generate</code></strong> 该命令执行后在<code>hexo</code>站点根目录下生成<code>public</code>文件夹</p>
@@ -370,10 +370,10 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
 
 
-<p>gitee   <a href="mailto:&#103;&#x69;&#116;&#x40;&#103;&#105;&#116;&#101;&#x65;&#46;&#99;&#111;&#x6d;">git@gitee.com</a>:your_name&#x2F;仓库名称.git (fetch)</p>
-<p>gitee   <a href="mailto:&#103;&#105;&#116;&#64;&#x67;&#105;&#116;&#x65;&#101;&#x2e;&#99;&#x6f;&#x6d;">git@gitee.com</a>:your_name&#x2F;仓库名称.git (push)</p>
-<p>github  <a href="mailto:&#x67;&#x69;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#117;&#x62;&#x2e;&#x63;&#x6f;&#x6d;">git@github.com</a>:your_name&#x2F;仓库名称.git (fetch)</p>
-<p>github  <a href="mailto:&#x67;&#105;&#x74;&#x40;&#103;&#x69;&#x74;&#x68;&#x75;&#98;&#x2e;&#99;&#111;&#x6d;">git@github.com</a>:your_name&#x2F;仓库名称.git (push)</p>
+<p>gitee   <a href="mailto:&#x67;&#x69;&#x74;&#64;&#103;&#105;&#116;&#101;&#101;&#46;&#99;&#x6f;&#109;">git@gitee.com</a>:your_name&#x2F;仓库名称.git (fetch)</p>
+<p>gitee   <a href="mailto:&#103;&#105;&#x74;&#64;&#x67;&#x69;&#x74;&#101;&#101;&#x2e;&#99;&#111;&#109;">git@gitee.com</a>:your_name&#x2F;仓库名称.git (push)</p>
+<p>github  <a href="mailto:&#x67;&#x69;&#116;&#64;&#103;&#x69;&#x74;&#104;&#117;&#x62;&#x2e;&#99;&#x6f;&#109;">git@github.com</a>:your_name&#x2F;仓库名称.git (fetch)</p>
+<p>github  <a href="mailto:&#103;&#105;&#x74;&#x40;&#103;&#x69;&#x74;&#x68;&#x75;&#98;&#46;&#99;&#x6f;&#109;">git@github.com</a>:your_name&#x2F;仓库名称.git (push)</p>
 <p>如果出现以上结果说明配置成功</p>
 <h3 id="仓库更新"><a href="#仓库更新" class="headerlink" title="仓库更新"></a>仓库更新</h3><p>1.上传代码</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;update&quot;</span></span><br></pre></td></tr></table></figure>
